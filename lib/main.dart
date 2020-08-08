@@ -19,14 +19,14 @@ class _MyAppState extends State<MyApp> {
   List<Meal> _available = DUMMY_MEALS;
   bool _isVeg = false;
   Color r = Colors.red;
-  void _applyFilter(bool x) {
+  void _applyFilter(bool y) {
     setState(() {
-      _isVeg = x;
+      _isVeg = y;
       List<Meal> temp;
-      if (x == true) {
+      if (y == true) {
         r = Colors.green;
         temp = DUMMY_MEALS.where((meal) {
-          return meal.isVegan == x;
+          return meal.isVegan == y;
         }).toList();
       } else {
         r = Colors.red;
